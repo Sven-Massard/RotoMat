@@ -9,6 +9,8 @@
         <module name="rotomat" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="12" />
+    <bytecodeTargetLevel>
+      <module name="rotomat" target="12" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c48d6a15-a8b4-403a-908c-fd788f6f52f1" name="Default Changelist" comment="" />
+    <list default="true" id="aa753c4d-c99c-413c-b835-edd4dbd3429e" name="Default Changelist" comment="&quot;Add basic model + methodes + tests.&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/de/svemass/rotomat/model/RotomatModelTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/google-java-format.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotomat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rotomat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -10,39 +29,86 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1563935436">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.25" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="7" />
+          <entry key="xml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+          <entry key="XML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1993" />
+          <entry key="txt" value="48" />
+          <entry key="xml" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1993" />
+          <entry key="PLAIN_TEXT" value="48" />
+          <entry key="XML" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+            <state relative-caret-position="15">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/RotomatDataBase.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/de/svemass/rotomat/model/RotomatModelTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
               <folding>
-                <element signature="e#0#556#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,91 +120,137 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>alert</find>
-    </findStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/grid/grid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/grid/Grid.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/RotomatDataBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/grid.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Grid.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/GridPane.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/view.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/model.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Model.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/View.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModelTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java" />
+        <option value="$PROJECT_DIR$/src/main/test/de/svemass/rotomat/model/RotomatModelTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1273" />
-    <option name="width" value="1294" />
-    <option name="height" value="1407" />
+    <option name="y" value="25" />
+    <option name="width" value="683" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="rotomat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="rotomat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="rotomat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rotomat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="rotomat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rotomat" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="rotomat" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RotoMat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RotoMat" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556831800472" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.37356323" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="de.svemass.rotomat.model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -152,19 +264,96 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Java/jdk-12.0.1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="de.svemass.rotomat.Main" />
+  <component name="RunManager" selected="JUnit.RotomatModelTest">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="de.svemass.rotomat.controller.Main" />
       <module name="rotomat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.svemass.rotomat.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RotomatModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rotomat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.svemass.rotomat.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.svemass.rotomat.model" />
+      <option name="MAIN_CLASS_NAME" value="de.svemass.rotomat.model.RotomatModelTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RotomatModelTest.createNewShelfTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rotomat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.svemass.rotomat.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.svemass.rotomat.model" />
+      <option name="MAIN_CLASS_NAME" value="de.svemass.rotomat.model.RotomatModelTest" />
+      <option name="METHOD_NAME" value="createNewShelfTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RotomatModelTest.renameSlotTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rotomat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.svemass.rotomat.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.svemass.rotomat.model" />
+      <option name="MAIN_CLASS_NAME" value="de.svemass.rotomat.model.RotomatModelTest" />
+      <option name="METHOD_NAME" value="renameSlotTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RotomatModelTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rotomat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.svemass.rotomat.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.svemass.rotomat.model" />
+      <option name="MAIN_CLASS_NAME" value="de.svemass.rotomat.model.RotomatModelTest" />
+      <option name="METHOD_NAME" value="toStringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.RotomatModelTest.createNewShelfTest" />
+      <item itemvalue="JUnit.RotomatModelTest.toStringTest" />
+      <item itemvalue="JUnit.RotomatModelTest.renameSlotTest" />
+      <item itemvalue="JUnit.RotomatModelTest" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.RotomatModelTest" />
+        <item itemvalue="JUnit.RotomatModelTest.renameSlotTest" />
+        <item itemvalue="JUnit.RotomatModelTest.toStringTest" />
+        <item itemvalue="JUnit.RotomatModelTest.createNewShelfTest" />
+        <item itemvalue="Application.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -173,202 +362,159 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c48d6a15-a8b4-403a-908c-fd788f6f52f1" name="Default Changelist" comment="" />
-      <created>1556643440661</created>
+      <changelist id="aa753c4d-c99c-413c-b835-edd4dbd3429e" name="Default Changelist" comment="" />
+      <created>1556822946193</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1556643440661</updated>
-      <workItem from="1556643442038" duration="3611000" />
-      <workItem from="1556664243792" duration="1015000" />
-      <workItem from="1556665562980" duration="7927000" />
-      <workItem from="1556734191311" duration="3724000" />
-      <workItem from="1556744833029" duration="68000" />
-      <workItem from="1556745189374" duration="34000" />
-      <workItem from="1556745239499" duration="984000" />
-      <workItem from="1556746298784" duration="1564000" />
-      <workItem from="1556747947502" duration="1426000" />
-      <workItem from="1556749479861" duration="46000" />
+      <updated>1556822946193</updated>
+      <workItem from="1556822947798" duration="1476000" />
+      <workItem from="1556825741862" duration="6054000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="RotomatModelTest_toStringTest - 2019.05.02 at 22h 55m 31s.xml">
+      <configuration name="RotomatModelTest.toStringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 22h 56m 59s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 23h 02m 36s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 23h 03m 22s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 23h 05m 21s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 23h 05m 40s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 23h 05m 43s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 23h 06m 03s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest_renameSlotTest - 2019.05.02 at 23h 07m 53s.xml">
+      <configuration name="RotomatModelTest.renameSlotTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RotomatModelTest - 2019.05.02 at 23h 08m 17s.xml">
+      <configuration name="RotomatModelTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20399000" />
+    <option name="totallyTimeSpent" value="7530000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26788554" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32969603" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32969603" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3998441" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32952693" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32952693" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39967373" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32969603" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32952693" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32952693" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="JSF" order="5" />
-      <window_info anchor="right" id="Bean Validation" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="CDI" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="Maven" order="10" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26589826" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32969603" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32969603" />
-      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="JSF" order="5" />
-      <window_info anchor="right" id="Bean Validation" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="CDI" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="right" id="Maven" order="10" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Add basic model + methodes + tests.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add basic model + methodes + tests.&quot;" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/function/Function.java">
+    <entry file="jar:///usr/lib/jvm/java-12-oracle/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/teamapps/teamapps-ux/0.9.7/teamapps-ux-0.9.7.jar!/org/teamapps/webcontroller/SimpleWebController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="40" selection-start-line="40" selection-end-line="42" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/12.0.1/javafx-graphics-12.0.1-win.jar!/javafx/stage/Window.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="478" column="17" selection-start-line="478" selection-start-column="17" selection-end-line="478" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/12.0.1/javafx-graphics-12.0.1-win.jar!/javafx/stage/Stage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="112" column="12" lean-forward="true" selection-start-line="112" selection-start-column="12" selection-end-line="112" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/12.0.1/javafx-graphics-12.0.1-win.jar!/javafx/scene/Scene.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="255" column="9" selection-start-line="255" selection-start-column="9" selection-end-line="255" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/12.0.1/javafx-controls-12.0.1-win.jar!/javafx/scene/control/TextField.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/12.0.1/javafx-graphics-12.0.1-win.jar!/javafx/scene/layout/GridPane.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="101" column="62" lean-forward="true" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="571" column="6" selection-start-line="571" selection-start-column="6" selection-end-line="571" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/grid/Grid.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.prefs/java/util/prefs/Preferences.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="522" column="27" selection-start-line="522" selection-start-column="27" selection-end-line="522" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/javax/xml/bind/jaxb-api/2.1/jaxb-api-2.1.pom">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/12.0.1/javafx-controls-12.0.1-win.jar!/javafx/scene/control/Alert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/12.0.1/javafx-controls-12.0.1-win.jar!/javafx/scene/control/ScrollPane.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="329">
+          <caret line="164" column="7" lean-forward="true" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="7" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6338#6339#0" expanded="true" />
+            <element signature="e#6406#6407#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/RotomatDataBase.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="180">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
           <folding>
-            <element signature="e#0#556#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/de/svemass/rotomat/model/RotomatModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="62" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="44" column="40" lean-forward="true" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        <state relative-caret-position="15">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -404,7 +550,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37356323" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -416,7 +562,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37356323" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -428,7 +574,8 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37356323" />
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -436,7 +583,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>11</last-edited>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -452,7 +599,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37356323" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
