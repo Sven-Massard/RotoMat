@@ -27,40 +27,40 @@ public class Main extends Application {
   @Override
   public void start(Stage primaryStage) {
     ScrollPane scrollPane = new ScrollPane();
-//    scrollPane.setContent(createGrid());
-//    Scene scene = new Scene(new Group());
-//    VBox vBox = new VBox();
-//    vBox.getChildren().addAll(scrollPane);
-//    scene.setRoot(vBox);
-//
-//    // Buttons
-//    Button editButton = new Button("Felder editierbar machen");
-//    editButton.setOnAction(
-//        actionEvent -> {
-//          isFieldEditable = !isFieldEditable;
-//          if (isFieldEditable) {
-//            editButton.setText("Felder nicht mehr editierbar machen");
-//          } else {
-//            editButton.setText("Felder editierbar machen");
-//          }
-//
-//          GridPane pane = (GridPane) scrollPane.getContent();
-//          for (Node node : pane.getChildren()) {
-//            if (node instanceof TextField) {
-//              ((TextField) node).setEditable(isFieldEditable);
-//            }
-//          }
-//        });
-//    Button saveButton = new Button("Speichern");
-//    saveButton.setOnAction(actionEvent -> {});
-//
-//    BorderPane buttonBox = new BorderPane();
-//    buttonBox.setLeft(editButton);
-//    buttonBox.setRight(saveButton);
-//
-//    vBox.getChildren().add(buttonBox);
-//    primaryStage.setScene(scene);
-//    primaryStage.show();
+    scrollPane.setContent(createGrid());
+    Scene scene = new Scene(new Group());
+    VBox vBox = new VBox();
+    vBox.getChildren().addAll(scrollPane);
+    scene.setRoot(vBox);
+
+    // Buttons
+    Button editButton = new Button("Felder editierbar machen");
+    editButton.setOnAction(
+        actionEvent -> {
+          isFieldEditable = !isFieldEditable;
+          if (isFieldEditable) {
+            editButton.setText("Felder nicht mehr editierbar machen");
+          } else {
+            editButton.setText("Felder editierbar machen");
+          }
+
+          GridPane pane = (GridPane) scrollPane.getContent();
+          for (Node node : pane.getChildren()) {
+            if (node instanceof TextField) {
+              ((TextField) node).setEditable(isFieldEditable);
+            }
+          }
+        });
+    Button saveButton = new Button("Speichern");
+    saveButton.setOnAction(actionEvent -> {});
+
+    BorderPane buttonBox = new BorderPane();
+    buttonBox.setLeft(editButton);
+    buttonBox.setRight(saveButton);
+
+    vBox.getChildren().add(buttonBox);
+    primaryStage.setScene(scene);
+    primaryStage.show();
   }
 
   /**
