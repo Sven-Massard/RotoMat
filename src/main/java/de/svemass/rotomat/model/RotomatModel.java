@@ -2,12 +2,18 @@ package de.svemass.rotomat.model;
 
 import de.svemass.rotomat.view.RotomatView;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
+@XmlRootElement
 public class RotomatModel extends ObservableRotomatModel {
 
-  private ArrayList<ArrayList<String>> shelves;
-  private boolean modelIsEditable;
+  @XmlElement private ArrayList<Shelf> shelves;
+  @XmlElement private boolean modelIsEditable;
+
+  @SuppressWarnings("unused")
+  public RotomatModel() {} // Do not remove! Needed for Xml builder.
 
   public RotomatModel(int amountShelves, int amountCompartmentsPerShelf, RotomatView view) {
     this(amountShelves, amountCompartmentsPerShelf);
@@ -18,30 +24,25 @@ public class RotomatModel extends ObservableRotomatModel {
   RotomatModel(int amountShelves, int amountCompartmentsPerShelf) {
     this.shelves = new ArrayList<>(amountShelves);
     for (int i = 0; i < amountShelves; i++) {
-      shelves.add(createNewShelf(amountCompartmentsPerShelf));
+      shelves.add(new Shelf(amountCompartmentsPerShelf));
     }
     this.modelIsEditable = false;
-  }
-
-  private static ArrayList<String> createNewShelf(int amountCompartments) {
-    ArrayList<String> shelf = new ArrayList<>(amountCompartments);
-    for (int i = 0; i < amountCompartments; i++) {
-      shelf.add("Leeres Fach");
-    }
-    return shelf;
   }
 
   public boolean renameSlot(
       int shelfIndex, int compartmentIndex, String newName, Integer caretPosition) {
 
-    if (shelves.size() <= shelfIndex || shelves.get(0).size() <= compartmentIndex) {
+    if (shelves.size() <= shelfIndex || shelves.get(0).getAmountComparments() <= compartmentIndex) {
       return false;
     }
-    ArrayList<String> shelf = shelves.get(shelfIndex);
-    if (!shelf.get(compartmentIndex).equals(newName)) {
-      shelf.set(compartmentIndex, newName);
+    Shelf shelf = shelves.get(shelfIndex);
+    if (!shelf.getCompartment(compartmentIndex).getName().equals(newName)) {
+      shelf.getCompartment(compartmentIndex).setName(newName);
       updateTextField(
-          (shelfIndex + 1), (compartmentIndex + 1), shelf.get(compartmentIndex), caretPosition);
+          (shelfIndex + 1),
+          (compartmentIndex + 1),
+          shelf.getCompartment(compartmentIndex).getName(),
+          caretPosition);
     }
     return true;
   }
@@ -49,7 +50,7 @@ public class RotomatModel extends ObservableRotomatModel {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    for (ArrayList<String> shelf : shelves) {
+    for (Shelf shelf : shelves) {
       sb.append(shelf.toString()).append("\n");
     }
     return sb.toString();
@@ -64,7 +65,9 @@ public class RotomatModel extends ObservableRotomatModel {
     return modelIsEditable;
   }
 
-  public ArrayList<ArrayList<String>> getShelves() {
+  public ArrayList<Shelf> getShelves() {
     return shelves;
   }
+
 }
+

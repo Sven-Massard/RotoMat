@@ -2,6 +2,7 @@ package de.svemass.rotomat.view;
 
 import de.svemass.rotomat.controller.RotomatController;
 import de.svemass.rotomat.model.RotomatModel;
+import de.svemass.rotomat.model.Shelf;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Insets;
@@ -17,8 +18,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.util.ArrayList;
 
 public class RotomatView extends Application implements RotomatModelObserver {
   private boolean isGridEditable;
@@ -54,7 +53,9 @@ public class RotomatView extends Application implements RotomatModelObserver {
           toggleGridEditable(isGridEditable);
         });
     Button saveButton = new Button("Speichern");
-    saveButton.setOnAction(actionEvent -> {});
+    saveButton.setOnAction(actionEvent -> {
+      controller.saveToFile();
+    });
 
     BorderPane buttonBox = new BorderPane();
     buttonBox.setLeft(editButton);
@@ -74,7 +75,7 @@ public class RotomatView extends Application implements RotomatModelObserver {
     grid.setVgap(1);
     grid.setPadding(new Insets(25, 25, 25, 25));
     if (!rotomatModel.getShelves().isEmpty()) {
-      for (int i = 0; i < rotomatModel.getShelves().get(0).size(); i++) {
+      for (int i = 0; i < rotomatModel.getShelves().get(0).getAmountComparments(); i++) {
         grid.add(new Label("Sektion " + (i + 1) + ""), i + 1, 0);
       }
     } else {
@@ -82,9 +83,9 @@ public class RotomatView extends Application implements RotomatModelObserver {
     }
     for (int i = 0; i < rotomatModel.getShelves().size(); i++) {
       grid.add(new Label("Regal " + (i + 1) + ""), 0, i + 1);
-      ArrayList<String> shelf = rotomatModel.getShelves().get(i);
-      for (int j = 0; j < shelf.size(); j++) {
-        TextField currentTextField = createTextField(shelf.get(j));
+      Shelf shelf = rotomatModel.getShelves().get(i);
+      for (int j = 0; j < shelf.getAmountComparments(); j++) {
+        TextField currentTextField = createTextField(shelf.getCompartment(j).getName());
         grid.add(currentTextField, j + 1, i + 1);
       }
     }

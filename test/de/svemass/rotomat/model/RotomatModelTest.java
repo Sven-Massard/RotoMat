@@ -73,22 +73,22 @@ class RotomatModelTest {
 
   @Test
   void getShelves() {
-    assertEquals(createShelves(), cut.getShelves());
+    assertEquals(createShelves().toString(), cut.getShelves().toString());
   }
 
-  private ArrayList<ArrayList<String>> createShelves() {
-    ArrayList<ArrayList<String>> shelves = new ArrayList<>(amountShelves);
+  private ArrayList<Shelf> createShelves() {
+    ArrayList<Shelf> shelves = new ArrayList<>(amountShelves);
     for (int i = 0; i < amountShelves; i++) {
-      shelves.add(createNewShelf());
+      shelves.add(new Shelf(amountCompartmentsPerShelf));
     }
     return shelves;
   }
 
-  private static ArrayList<String> createNewShelf() {
-    ArrayList<String> shelf = new ArrayList<>(RotomatModelTest.amountCompartmentsPerShelf);
-    for (int i = 0; i < amountCompartmentsPerShelf; i++) {
-      shelf.add("Leeres Fach");
-    }
-    return shelf;
-  }
+//  private static Shelf createNewShelf() {
+//    Shelf shelf = new ArrayList<>(amountCompartmentsPerShelf);
+//    for (int i = 0; i < amountCompartmentsPerShelf; i++) {
+//      shelf.addComparment(new Compartment("Leeres Fach"));
+//    }
+//    return shelf;
+//  }
 }
