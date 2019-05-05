@@ -2,7 +2,6 @@ package de.svemass.rotomat.model;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class RotomatModelTest {
@@ -11,6 +10,8 @@ class RotomatModelTest {
     private final static int amountCompartmentsPerShelf = 6;
     private RotomatModel rotomatModel;
 
+
+
     @BeforeEach
     void beforeEach() {
         rotomatModel = new RotomatModel(amountShelves, amountCompartmentsPerShelf);
@@ -18,7 +19,7 @@ class RotomatModelTest {
 
     @Test
     void renameSlotTest() {
-        rotomatModel.renameSlot(1, 3, "Test");
+        rotomatModel.renameSlot(1, 3, "Test", 0);
         String expectedResult = "[Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach]\n"
                 + "[Leeres Fach, Leeres Fach, Leeres Fach, Test, Leeres Fach, Leeres Fach]\n"
                 + "[Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach]\n";

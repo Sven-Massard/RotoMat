@@ -13,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -25,9 +24,7 @@ public class RotomatView extends Application implements RotomatModelObserver {
   private boolean isGridEditable;
   private GridPane gridPane;
   private ScrollPane scrollPane;
-  private Scene scene;
   private Stage stage;
-  private static RotomatView instance;
   private RotomatController controller;
 
   public static void main(String[] args) {
@@ -38,7 +35,7 @@ public class RotomatView extends Application implements RotomatModelObserver {
   public void start(Stage primaryStage) {
     stage = primaryStage;
     scrollPane = new ScrollPane();
-    scene = new Scene(new Group());
+    Scene scene = new Scene(new Group());
     VBox vBox = new VBox();
     vBox.getChildren().addAll(scrollPane);
     scene.setRoot(vBox);
@@ -65,7 +62,8 @@ public class RotomatView extends Application implements RotomatModelObserver {
     vBox.getChildren().add(buttonBox);
 
     stage.setScene(scene);
-    controller = new RotomatController(this);
+    controller = new RotomatController();
+    controller.initializeModel(this);
   }
 
   private GridPane buildRotomatGrid(RotomatModel rotomatModel) {
@@ -101,24 +99,28 @@ public class RotomatView extends Application implements RotomatModelObserver {
   }
 
   @Override
-  public void updateGridIsEditable(boolean isEditable) {
+  public void updateGridIsEditable(boolean isEditable) { // TODO remove?
     this.isGridEditable = isEditable;
   }
 
   @Override
-  public void updateTextField(int row, int column, String newName) {
+  public void updateTextField(int row, int column, String newName, Integer caretPosition) {
     for (Node node : gridPane.getChildren()) {
-      if (node instanceof TextField
+      if (node instanceof TextFieldWithListener
           && GridPane.getColumnIndex(node) == column
           && GridPane.getRowIndex(node) == row) {
+        ((TextFieldWithListener) node).removeListeners();
         Platform.runLater(
             () -> {
               gridPane.getChildren().remove(node);
               TextField newTextField = createTextField(newName);
               gridPane.add(newTextField, column, row);
-              newTextField.requestFocus();
-              newTextField.positionCaret(newName.length());
+              if (caretPosition != null) {
+                newTextField.requestFocus();
+                newTextField.positionCaret(caretPosition);
+              }
             });
+        break;
       }
     }
   }
@@ -134,17 +136,6 @@ public class RotomatView extends Application implements RotomatModelObserver {
   }
 
   private TextField createTextField(String name) {
-    TextField currentTextField = new TextField(name);
-    currentTextField.setEditable(isGridEditable);
-    currentTextField.setOnKeyPressed(
-        ke -> {
-          if (isGridEditable && ke.getCode().equals(KeyCode.ENTER)) {
-            controller.updateField(
-                GridPane.getRowIndex(currentTextField),
-                GridPane.getColumnIndex(currentTextField),
-                currentTextField.getText());
-          }
-        });
-    return currentTextField;
+    return new TextFieldWithListener(name, isGridEditable, this.controller);
   }
 }

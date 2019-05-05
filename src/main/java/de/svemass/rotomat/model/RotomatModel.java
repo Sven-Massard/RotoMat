@@ -15,23 +15,12 @@ public class RotomatModel extends ObservableRotomatModel {
     this.updateGridView(this);
   }
 
-  public RotomatModel(int amountShelves, int amountCompartmentsPerShelf) {
+  RotomatModel(int amountShelves, int amountCompartmentsPerShelf) {
     this.shelves = new ArrayList<>(amountShelves);
     for (int i = 0; i < amountShelves; i++) {
       shelves.add(createNewShelf(amountCompartmentsPerShelf));
     }
     this.modelIsEditable = false;
-  }
-
-  public boolean renameSlot(int shelfIndex, int compartmentIndex, String newName) {
-    if (shelves.size() <= shelfIndex || shelves.get(0).size() <= compartmentIndex) {
-      return false;
-    } else {
-      shelves.get(shelfIndex).set(compartmentIndex, newName + "edited!");
-      updateTextField(
-          (shelfIndex + 1), (compartmentIndex + 1), shelves.get(shelfIndex).get(compartmentIndex));
-      return true;
-    }
   }
 
   private static ArrayList<String> createNewShelf(int amountCompartments) {
@@ -40,6 +29,21 @@ public class RotomatModel extends ObservableRotomatModel {
       shelf.add("Leeres Fach");
     }
     return shelf;
+  }
+
+  public boolean renameSlot(
+      int shelfIndex, int compartmentIndex, String newName, Integer caretPosition) {
+
+    if (shelves.size() <= shelfIndex || shelves.get(0).size() <= compartmentIndex) {
+      return false;
+    }
+    ArrayList<String> shelf = shelves.get(shelfIndex);
+    if (!shelf.get(compartmentIndex).equals(newName)) {
+      shelf.set(compartmentIndex, newName);
+      updateTextField(
+          (shelfIndex + 1), (compartmentIndex + 1), shelf.get(compartmentIndex), caretPosition);
+    }
+    return true;
   }
 
   @Override

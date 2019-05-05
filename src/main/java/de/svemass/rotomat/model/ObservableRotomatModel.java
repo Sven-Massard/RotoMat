@@ -17,7 +17,7 @@ abstract class ObservableRotomatModel {
     observer.updateGridIsEditable(isEditable);
   }
 
-  void updateTextField(int row, int column, String newName) {
-    observer.updateTextField(row, column, newName);
+  void updateTextField(int row, int column, String newName, Integer caretPosition) {
+    observer.updateTextField(row, column, newName, caretPosition);
   }
 }
