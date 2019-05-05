@@ -2,19 +2,22 @@ package de.svemass.rotomat.model;
 
 import de.svemass.rotomat.view.RotomatModelObserver;
 
-public abstract class ObservableRotomatModel {
-    private RotomatModelObserver observer;
+abstract class ObservableRotomatModel {
+  private RotomatModelObserver observer;
 
-    public void setObserver(RotomatModelObserver observer) {
-        this.observer = observer;
-    }
+  void setObserver(RotomatModelObserver observer) {
+    this.observer = observer;
+  }
 
-    void updateGridView(RotomatModel model) {
-        observer.updateGridView(model);
-    }
+  void updateGridView(RotomatModel model) {
+    observer.updateGridView(model);
+  }
 
-    void updateGridIsEditable(boolean isEditable){
-        observer.updateGridIsEditable(isEditable);
-    }
+  void updateGridIsEditable(boolean isEditable) {
+    observer.updateGridIsEditable(isEditable);
+  }
 
+  void updateTextField(int row, int column, String newName) {
+    observer.updateTextField(row, column, newName);
+  }
 }
