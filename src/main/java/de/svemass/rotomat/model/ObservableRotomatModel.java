@@ -9,6 +9,10 @@ abstract class ObservableRotomatModel {
     this.observer = observer;
   }
 
+  RotomatModelObserver getObserver() {
+    return this.observer;
+  }
+
   void updateGridView(RotomatModel model) {
     observer.updateGridView(model);
   }
