@@ -1,5 +1,7 @@
 package de.svemass.rotomat.view;
 
+import de.svemass.rotomat.controller.RotomatController;
+import de.svemass.rotomat.model.RotomatModel;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -15,22 +17,37 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
+import java.util.ArrayList;
 
-public class View extends Application {
+
+public class RotomatView extends Application implements RotomatModelObserver {
     private boolean isFieldEditable;
     private GridPane gridPane;
+    private ScrollPane scrollPane;
+    private Scene scene;
+    private Stage stage;
+    private static RotomatView instance;
+    private RotomatController controller;
 
+    public RotomatView() {
+        instance = this;
+    }
 
-    public static void displayRotomat(String[] args) {
+    public static RotomatView getInstance() {
+        return instance;
+    }
+
+    public static void main(String[] args) {
         launch();
     }
 
     @Override
     public void start(Stage primaryStage) {
-        ScrollPane scrollPane = new ScrollPane();
-        scrollPane.setContent(createGrid(5, 5)); //TODO
-        Scene scene = new Scene(new Group());
+        controller = new RotomatController(this);
+        stage = primaryStage;
+        scrollPane = new ScrollPane();
+        scrollPane.setContent(gridPane);
+        scene = new Scene(new Group());
         VBox vBox = new VBox();
         vBox.getChildren().addAll(scrollPane);
         scene.setRoot(vBox);
@@ -39,7 +56,9 @@ public class View extends Application {
         Button editButton = new Button("Felder editierbar machen");
         editButton.setOnAction(
                 actionEvent -> {
-                    isFieldEditable = !isFieldEditable;
+
+                    controller.toggleGridEditable();
+
                     if (isFieldEditable) {
                         editButton.setText("Felder nicht mehr editierbar machen");
                     } else {
@@ -60,31 +79,47 @@ public class View extends Application {
         BorderPane buttonBox = new BorderPane();
         buttonBox.setLeft(editButton);
         buttonBox.setRight(saveButton);
-
         vBox.getChildren().add(buttonBox);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+
+        stage.setScene(scene);
+        stage.show();
+
     }
 
-    private GridPane createGrid(int amountShelves, int amountCompartmentsPerShelf) {
+    private GridPane buildRotomatGrid(RotomatModel rotomatModel) {
         GridPane grid = new GridPane();
         grid.setAlignment(Pos.CENTER);
         grid.setHgap(10);
         grid.setVgap(1);
         grid.setPadding(new Insets(25, 25, 25, 25));
-        for (int i = 0; i < amountShelves; i++) {
-            grid.add(new Label("Fach " + (i + 1) + ""), 0, i + 1);
-            for (int j = 0; j < amountCompartmentsPerShelf; j++) {
-                grid.add(new Label("Sektion " + (j + 1) + ""), j + 1, 0);
-                grid.add(new TextField(), j + 1, i + 1);
+        if (!rotomatModel.getShelves().isEmpty()) {
+            for (int i = 0; i < rotomatModel.getShelves().get(0).size(); i++) {
+                grid.add(new Label("Sektion " + (i + 1) + ""), i + 1, 0);
             }
+        } else {
+            return grid;
         }
-        for (Node node : grid.getChildren()) {
-            if (node instanceof TextField) {
-                ((TextField) node).setEditable(false);
-                isFieldEditable = false;
+        for (int i = 0; i < rotomatModel.getShelves().size(); i++) {
+            grid.add(new Label("Regal " + (i + 1) + ""), 0, i + 1);
+            ArrayList<String> shelf = rotomatModel.getShelves().get(i);
+            for (int j = 0; j < shelf.size(); j++) {
+                TextField currentTextField = new TextField(shelf.get(j));
+                currentTextField.setEditable(rotomatModel.isModelIsEditable());
+                grid.add(currentTextField, j + 1, i + 1);
             }
+
         }
         return grid;
+    }
+
+    @Override
+    public void updateGridView(RotomatModel model) {
+        gridPane = buildRotomatGrid(model);
+
+    }
+
+    @Override
+    public void updateGridIsEditable(boolean isEditable) {
+        this.isFieldEditable = isEditable;
     }
 }
