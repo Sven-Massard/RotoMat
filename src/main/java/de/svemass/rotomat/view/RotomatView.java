@@ -53,9 +53,7 @@ public class RotomatView extends Application implements RotomatModelObserver {
           toggleGridEditable(isGridEditable);
         });
     Button saveButton = new Button("Speichern");
-    saveButton.setOnAction(actionEvent -> {
-      controller.saveToFile();
-    });
+    saveButton.setOnAction(actionEvent -> controller.saveToFile());
 
     BorderPane buttonBox = new BorderPane();
     buttonBox.setLeft(editButton);

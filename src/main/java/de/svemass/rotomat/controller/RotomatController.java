@@ -13,6 +13,24 @@ public class RotomatController {
   private static final int amountCompartmentsPerShelf = 6; // TODO Move elsewhere
   private RotomatModel model;
 
+  private static void modelToXml(RotomatModel rotomatModel) {
+    try {
+
+      File file = new File("F:\\workspace\\Java\\rotomat\\file.xml");
+      JAXBContext jaxbContext = JAXBContext.newInstance(RotomatModel.class);
+      Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+
+      // output pretty printed
+      jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+      jaxbMarshaller.marshal(rotomatModel, file);
+      jaxbMarshaller.marshal(rotomatModel, System.out);
+
+    } catch (JAXBException e) {
+      e.printStackTrace();
+    }
+  }
+
   public void initializeModel(RotomatView view) {
     model = new RotomatModel(amountShelves, amountCompartmentsPerShelf, view);
   }
@@ -32,27 +50,8 @@ public class RotomatController {
     }
   }
 
-  public boolean saveToFile() {
+  public void saveToFile() {
     System.out.println("Saving to File...");
     modelToXml(model);
-    return true;
-  }
-
-  public static void modelToXml(RotomatModel rotomatModel) {
-    try {
-
-      File file = new File("F:\\workspace\\Java\\rotomat\\file.xml");
-      JAXBContext jaxbContext = JAXBContext.newInstance(RotomatModel.class);
-      Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
-      // output pretty printed
-      jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-
-      jaxbMarshaller.marshal(rotomatModel, file);
-      jaxbMarshaller.marshal(rotomatModel, System.out);
-
-    } catch (JAXBException e) {
-      e.printStackTrace();
-    }
   }
 }

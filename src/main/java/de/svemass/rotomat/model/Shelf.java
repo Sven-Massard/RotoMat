@@ -4,10 +4,9 @@ import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
 
 public class Shelf {
-  @XmlElement
-  private ArrayList<Compartment> shelf;
+  @XmlElement private ArrayList<Compartment> shelf;
 
-  public Shelf(int amountCompartments) {
+  Shelf(int amountCompartments) {
     shelf = new ArrayList<>(amountCompartments);
     for (int i = 0; i < amountCompartments; i++) {
       shelf.add(new Compartment("Leeres Fach"));
@@ -23,7 +22,7 @@ public class Shelf {
   }
 
   @Override
-  public String toString(){
+  public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("[");
     for (Compartment compartment : shelf) {

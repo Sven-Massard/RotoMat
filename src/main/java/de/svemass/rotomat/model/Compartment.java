@@ -11,7 +11,7 @@ public class Compartment {
     return this.name;
   }
 
-  public void setName(String name) {
+  void setName(String name) {
     this.name = name;
   }
 

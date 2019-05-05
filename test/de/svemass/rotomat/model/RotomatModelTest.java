@@ -19,9 +19,9 @@ class RotomatModelTest {
 
   private static final int amountShelves = 3;
   private static final int amountCompartmentsPerShelf = 6;
+  @Mock RotomatModelObserver rotomatModelObserver;
   private RotomatModel cut;
   private RotomatModel mySpy;
-  @Mock RotomatModelObserver rotomatModelObserver;
 
   @BeforeEach
   void beforeEach() {
@@ -84,11 +84,11 @@ class RotomatModelTest {
     return shelves;
   }
 
-//  private static Shelf createNewShelf() {
-//    Shelf shelf = new ArrayList<>(amountCompartmentsPerShelf);
-//    for (int i = 0; i < amountCompartmentsPerShelf; i++) {
-//      shelf.addComparment(new Compartment("Leeres Fach"));
-//    }
-//    return shelf;
-//  }
+  //  private static Shelf createNewShelf() {
+  //    Shelf shelf = new ArrayList<>(amountCompartmentsPerShelf);
+  //    for (int i = 0; i < amountCompartmentsPerShelf; i++) {
+  //      shelf.addComparment(new Compartment("Leeres Fach"));
+  //    }
+  //    return shelf;
+  //  }
 }

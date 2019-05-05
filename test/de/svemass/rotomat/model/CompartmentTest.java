@@ -1,21 +1,23 @@
 package de.svemass.rotomat.model;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CompartmentTest {
 
   Compartment compartment;
+
   @BeforeEach
-  void beforeEach(){
+  void beforeEach() {
     compartment = new Compartment("Test");
   }
 
   @Test
-  void testGetName(){
+  void testGetName() {
     assertEquals("Test", compartment.getName());
   }
+
   @Test
   void testSetName() {
     compartment.setName("Changed Name");

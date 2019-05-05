@@ -1,14 +1,15 @@
 package de.svemass.rotomat.model;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class ShelfTest {
 
   Shelf shelf;
+
   @BeforeEach
-  void beforeEach(){
+  void beforeEach() {
     shelf = new Shelf(6);
   }
 
@@ -20,9 +21,8 @@ class ShelfTest {
 
   @Test
   void testToString() {
-    String expected = "[Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres " +
-        "Fach]";
-
+    String expected =
+        "[Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres Fach, Leeres " + "Fach]";
 
     assertEquals(expected, shelf.toString());
   }

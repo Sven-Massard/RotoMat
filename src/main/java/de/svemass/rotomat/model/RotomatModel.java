@@ -68,6 +68,4 @@ public class RotomatModel extends ObservableRotomatModel {
   public ArrayList<Shelf> getShelves() {
     return shelves;
   }
-
 }
-
