@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa753c4d-c99c-413c-b835-edd4dbd3429e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/ObservableRotomatModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatModelObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/de/svemass/rotomat/view/RotomatViewTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,14 +41,14 @@
         <counts>
           <entry key="dummy" value="35" />
           <entry key="java" value="4989" />
-          <entry key="txt" value="48" />
+          <entry key="txt" value="69" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4989" />
-          <entry key="PLAIN_TEXT" value="83" />
+          <entry key="PLAIN_TEXT" value="104" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -80,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+            <state relative-caret-position="270">
+              <caret line="102" column="40" lean-forward="true" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1081#1082#0" expanded="true" />
@@ -301,7 +293,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557017200558" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557017492302" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -432,7 +424,7 @@
       <updated>1556822946193</updated>
       <workItem from="1556822947798" duration="1476000" />
       <workItem from="1556825741862" duration="6116000" />
-      <workItem from="1556999008515" duration="13652000" />
+      <workItem from="1556999008515" duration="13952000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Add basic model + methodes + tests.&quot;">
       <created>1556831845892</created>
@@ -441,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556831845892</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implement basic MVC">
+      <created>1557017378266</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1557017378268</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -477,7 +476,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21244000" />
+    <option name="totallyTimeSpent" value="21544000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -530,7 +529,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&quot;Add basic model + methodes + tests.&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Add basic model + methodes + tests.&quot;" />
+    <MESSAGE value="Implement basic MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement basic MVC" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/java-12-oracle/lib/src.zip!/java.base/java/util/ArrayList.java">
@@ -672,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="112" column="5" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        <state relative-caret-position="270">
+          <caret line="102" column="40" lean-forward="true" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1081#1082#0" expanded="true" />
