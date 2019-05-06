@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="rotomat" target="12" />
+      <module name="rotomat" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
