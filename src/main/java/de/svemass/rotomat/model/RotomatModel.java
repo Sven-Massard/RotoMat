@@ -10,10 +10,17 @@ import java.util.ArrayList;
 public class RotomatModel extends ObservableRotomatModel {
 
   @XmlElement private ArrayList<Shelf> shelves;
-  @XmlElement private boolean modelIsEditable;
+  private boolean modelIsEditable;
 
   @SuppressWarnings("unused")
-  public RotomatModel() {} // Do not remove! Needed for Xml builder.
+  public RotomatModel() {} // Do not remove, needed for JAXB
+
+  public RotomatModel(RotomatModel model, RotomatView view) {
+    this.modelIsEditable = false;
+    this.shelves = model.shelves;
+    this.setObserver(view);
+    this.updateGridView(this);
+  } // Do not remove! Needed for Xml builder.
 
   public RotomatModel(int amountShelves, int amountCompartmentsPerShelf, RotomatView view) {
     this(amountShelves, amountCompartmentsPerShelf);

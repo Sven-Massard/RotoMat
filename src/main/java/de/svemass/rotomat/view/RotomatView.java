@@ -19,6 +19,9 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import javax.xml.bind.JAXBException;
+import java.io.FileNotFoundException;
+
 public class RotomatView extends Application implements RotomatModelObserver {
   private static RotomatController controller;
   private static RotomatView instance;
@@ -40,9 +43,10 @@ public class RotomatView extends Application implements RotomatModelObserver {
   }
 
   @Override
-  public void start(Stage primaryStage) {
+  public void start(Stage primaryStage) throws JAXBException, FileNotFoundException {
     instance = this;
     stage = primaryStage;
+    stage.setTitle("Rotomat Inventar");
     scrollPane = new ScrollPane();
     Scene scene = new Scene(new Group());
     VBox vBox = new VBox();

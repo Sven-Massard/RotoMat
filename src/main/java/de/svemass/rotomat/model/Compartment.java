@@ -5,6 +5,9 @@ import javax.xml.bind.annotation.XmlElement;
 public class Compartment {
   private String name;
 
+  @SuppressWarnings("unused")
+  public Compartment() {} // Do not remove, needed for JAXB
+
   Compartment(String name) {
     setName(name);
   }

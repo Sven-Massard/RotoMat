@@ -6,6 +6,9 @@ import java.util.ArrayList;
 public class Shelf {
   @XmlElement private ArrayList<Compartment> shelf;
 
+  @SuppressWarnings("unused")
+  public Shelf() {} // Do not remove, needed for JAXB
+
   Shelf(int amountCompartments) {
     shelf = new ArrayList<>(amountCompartments);
     for (int i = 0; i < amountCompartments; i++) {

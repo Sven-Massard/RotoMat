@@ -6,16 +6,19 @@ import de.svemass.rotomat.view.RotomatView;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class RotomatController {
   private static final int amountShelves = 46; // TODO Move elsewhere
   private static final int amountCompartmentsPerShelf = 6; // TODO Move elsewhere
+  private static File file = new File("F:\\workspace\\Java\\rotomat\\rotomat.xml");
   private RotomatModel model;
 
   private static void modelToXml(RotomatModel rotomatModel) {
     try {
-      File file = new File("F:\\workspace\\Java\\rotomat\\file.xml");
+
       JAXBContext jaxbContext = JAXBContext.newInstance(RotomatModel.class);
       Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
@@ -30,14 +33,28 @@ public class RotomatController {
     }
   }
 
+  private RotomatModel xmlToModel() throws JAXBException {
+    JAXBContext jaxbContext = JAXBContext.newInstance(RotomatModel.class);
+
+    Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+
+    model = (RotomatModel) unmarshaller.unmarshal(file);
+
+    return model;
+  }
+
   public void startApplication(String[] args) {
     RotomatView.setController(this);
     RotomatView.main(args);
-    System.out.println("test");
   }
 
-  public void initializeModel(RotomatView view) {
-    model = new RotomatModel(amountShelves, amountCompartmentsPerShelf, view);
+  public void initializeModel(RotomatView view) throws JAXBException, FileNotFoundException {
+    if (file.exists()) {
+      System.out.println("Model File found!"); // TODO Make real log entry
+      model = new RotomatModel(xmlToModel(), view);
+    } else {
+      model = new RotomatModel(amountShelves, amountCompartmentsPerShelf, view);
+    }
   }
 
   public void toggleGridEditable() {
@@ -56,7 +73,6 @@ public class RotomatController {
   }
 
   public void saveToFile() {
-    System.out.println("Saving to File...");
     modelToXml(model);
   }
 }
