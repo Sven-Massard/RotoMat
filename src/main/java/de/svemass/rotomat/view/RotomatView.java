@@ -20,18 +20,28 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class RotomatView extends Application implements RotomatModelObserver {
+  private static RotomatController controller;
+  private static RotomatView instance;
   private boolean isGridEditable;
   private GridPane gridPane;
   private ScrollPane scrollPane;
   private Stage stage;
-  private RotomatController controller;
 
   public static void main(String[] args) {
     launch();
   }
 
+  private static RotomatView getInstance() {
+    return instance;
+  }
+
+  public static void setController(RotomatController rotomatController) {
+    controller = rotomatController;
+  }
+
   @Override
   public void start(Stage primaryStage) {
+    instance = this;
     stage = primaryStage;
     scrollPane = new ScrollPane();
     Scene scene = new Scene(new Group());
@@ -59,35 +69,8 @@ public class RotomatView extends Application implements RotomatModelObserver {
     buttonBox.setLeft(editButton);
     buttonBox.setRight(saveButton);
     vBox.getChildren().add(buttonBox);
-
     stage.setScene(scene);
-    controller = new RotomatController();
-    controller.initializeModel(this);
-  }
-
-  private GridPane buildRotomatGrid(RotomatModel rotomatModel) {
-    isGridEditable = rotomatModel.isModelEditable();
-    GridPane grid = new GridPane();
-    grid.setAlignment(Pos.CENTER);
-    grid.setHgap(10);
-    grid.setVgap(1);
-    grid.setPadding(new Insets(25, 25, 25, 25));
-    if (!rotomatModel.getShelves().isEmpty()) {
-      for (int i = 0; i < rotomatModel.getShelves().get(0).getAmountComparments(); i++) {
-        grid.add(new Label("Sektion " + (i + 1) + ""), i + 1, 0);
-      }
-    } else {
-      return grid;
-    }
-    for (int i = 0; i < rotomatModel.getShelves().size(); i++) {
-      grid.add(new Label("Regal " + (i + 1) + ""), 0, i + 1);
-      Shelf shelf = rotomatModel.getShelves().get(i);
-      for (int j = 0; j < shelf.getAmountComparments(); j++) {
-        TextField currentTextField = createTextField(shelf.getCompartment(j).getName());
-        grid.add(currentTextField, j + 1, i + 1);
-      }
-    }
-    return grid;
+    controller.initializeModel(getInstance());
   }
 
   @Override
@@ -124,6 +107,31 @@ public class RotomatView extends Application implements RotomatModelObserver {
     }
   }
 
+  private GridPane buildRotomatGrid(RotomatModel rotomatModel) {
+    isGridEditable = rotomatModel.isModelEditable();
+    GridPane grid = new GridPane();
+    grid.setAlignment(Pos.CENTER);
+    grid.setHgap(10);
+    grid.setVgap(1);
+    grid.setPadding(new Insets(25, 25, 25, 25));
+    if (!rotomatModel.getShelves().isEmpty()) {
+      for (int i = 0; i < rotomatModel.getShelves().get(0).getAmountComparments(); i++) {
+        grid.add(new Label("Sektion " + (i + 1) + ""), i + 1, 0);
+      }
+    } else {
+      return grid;
+    }
+    for (int i = 0; i < rotomatModel.getShelves().size(); i++) {
+      grid.add(new Label("Regal " + (i + 1) + ""), 0, i + 1);
+      Shelf shelf = rotomatModel.getShelves().get(i);
+      for (int j = 0; j < shelf.getAmountComparments(); j++) {
+        TextField currentTextField = createTextField(shelf.getCompartment(j).getName());
+        grid.add(currentTextField, j + 1, i + 1);
+      }
+    }
+    return grid;
+  }
+
   private void toggleGridEditable(boolean isFieldEditable) {
     if (!(gridPane == null)) {
       for (Node node : gridPane.getChildren()) {
@@ -135,6 +143,6 @@ public class RotomatView extends Application implements RotomatModelObserver {
   }
 
   private TextField createTextField(String name) {
-    return new TextFieldWithListener(name, isGridEditable, this.controller);
+    return new TextFieldWithListener(name, isGridEditable, controller);
   }
 }

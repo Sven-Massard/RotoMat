@@ -2,27 +2,7 @@
 <rotomatModel>
     <shelves>
         <shelf>
-            <name>Ich schlafe hier nur</name>
-        </shelf>
-        <shelf>
-            <name>Ich schlaufe auch</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-    </shelves>
-    <shelves>
-        <shelf>
-            <name>Leeres Fach</name>
+            <name>Leeres 123123</name>
         </shelf>
         <shelf>
             <name>Leeres Fach</name>
@@ -565,26 +545,6 @@
             <name>Leeres Fach</name>
         </shelf>
         <shelf>
-            <name>Hier ist nichts drin.</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-    </shelves>
-    <shelves>
-        <shelf>
-            <name>Leeres Fach</name>
-        </shelf>
-        <shelf>
             <name>Leeres Fach</name>
         </shelf>
         <shelf>
@@ -920,5 +880,45 @@
             <name>Leeres Fach</name>
         </shelf>
     </shelves>
-    <modelIsEditable>true</modelIsEditable>
+    <shelves>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+    </shelves>
+    <shelves>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+        <shelf>
+            <name>Leeres Fach</name>
+        </shelf>
+    </shelves>
+    <modelIsEditable>false</modelIsEditable>
 </rotomatModel>

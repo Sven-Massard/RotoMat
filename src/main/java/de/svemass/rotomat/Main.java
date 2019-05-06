@@ -1,11 +1,12 @@
 package de.svemass.rotomat;
 
-import de.svemass.rotomat.view.RotomatView;
+import de.svemass.rotomat.controller.RotomatController;
 
 public class Main {
 
   public static void main(String[] args) {
-    RotomatView.main(args);
+    RotomatController rotomatController = new RotomatController();
+    rotomatController.startApplication(args);
   }
 
   //  private File getPreferences() { // TODO

@@ -15,7 +15,6 @@ public class RotomatController {
 
   private static void modelToXml(RotomatModel rotomatModel) {
     try {
-
       File file = new File("F:\\workspace\\Java\\rotomat\\file.xml");
       JAXBContext jaxbContext = JAXBContext.newInstance(RotomatModel.class);
       Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
@@ -29,6 +28,12 @@ public class RotomatController {
     } catch (JAXBException e) {
       e.printStackTrace();
     }
+  }
+
+  public void startApplication(String[] args) {
+    RotomatView.setController(this);
+    RotomatView.main(args);
+    System.out.println("test");
   }
 
   public void initializeModel(RotomatView view) {
