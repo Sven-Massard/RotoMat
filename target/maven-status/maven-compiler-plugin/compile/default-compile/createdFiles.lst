@@ -1,0 +1,10 @@
+de\svemass\rotomat\view\InventoryTextField.class
+de\svemass\rotomat\view\RotomatModelObserver.class
+de\svemass\rotomat\model\Shelf.class
+de\svemass\rotomat\controller\RotomatController.class
+de\svemass\rotomat\Main.class
+de\svemass\rotomat\model\RotomatModel.class
+de\svemass\rotomat\view\SearchTextField.class
+de\svemass\rotomat\model\Compartment.class
+de\svemass\rotomat\model\ObservableRotomatModel.class
+de\svemass\rotomat\view\RotomatView.class

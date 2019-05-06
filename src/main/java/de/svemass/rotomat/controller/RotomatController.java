@@ -1,5 +1,6 @@
 package de.svemass.rotomat.controller;
 
+import de.svemass.rotomat.Main;
 import de.svemass.rotomat.model.RotomatModel;
 import de.svemass.rotomat.view.RotomatView;
 
@@ -12,8 +13,26 @@ import java.io.File;
 public class RotomatController {
   private static final int amountShelves = 46; // TODO Move elsewhere
   private static final int amountCompartmentsPerShelf = 6; // TODO Move elsewhere
-  private static File file = new File("F:\\workspace\\Java\\rotomat\\rotomat.xml");
+  private static File file;
   private RotomatModel model;
+
+  public RotomatController() {
+    setFilePath();
+  }
+
+  private void setFilePath() {
+    file =
+        new File(
+            new File(
+                    Main.class
+                        .getProtectionDomain()
+                        .getCodeSource()
+                        .getLocation()
+                        .getPath()
+                        .replaceAll("%20", " "))
+                .getParent(),
+            "rotomat.xml");
+  }
 
   private static void modelToXml(RotomatModel rotomatModel) {
     try {
@@ -25,7 +44,6 @@ public class RotomatController {
       jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
       jaxbMarshaller.marshal(rotomatModel, file);
-      jaxbMarshaller.marshal(rotomatModel, System.out);
 
     } catch (JAXBException e) {
       e.printStackTrace();
@@ -49,7 +67,6 @@ public class RotomatController {
 
   public void initializeModel(RotomatView view) throws JAXBException {
     if (file.exists()) {
-      System.out.println("Model File found!"); // TODO Make real log entry
       model = new RotomatModel(xmlToModel(), view);
     } else {
       model = new RotomatModel(amountShelves, amountCompartmentsPerShelf, view);

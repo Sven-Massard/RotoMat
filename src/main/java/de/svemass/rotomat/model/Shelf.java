@@ -12,7 +12,7 @@ public class Shelf {
   Shelf(int amountCompartments) {
     shelf = new ArrayList<>(amountCompartments);
     for (int i = 0; i < amountCompartments; i++) {
-      shelf.add(new Compartment("Leeres Fach"));
+      shelf.add(new Compartment(""));
     }
   }
 

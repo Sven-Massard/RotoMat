@@ -2,18 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa753c4d-c99c-413c-b835-edd4dbd3429e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/SearchTextField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_2_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RotoMat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RotoMat.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotomat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rotomat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotomat.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/TextFieldWithListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/InventoryTextField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/controller/RotomatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/controller/RotomatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/view/RotomatView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/view/RotomatView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/view/TextFieldWithListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Shelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Shelf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/rotomat.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/controller/RotomatController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/model/Compartment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/model/ObservableRotomatModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/model/RotomatModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/model/Shelf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/view/InventoryTextField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/view/RotomatModelObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/view/RotomatView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/svemass/rotomat/view/SearchTextField.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/rotomat.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/de/svemass/rotomat/model/CompartmentTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/de/svemass/rotomat/model/RotomatModelTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/de/svemass/rotomat/model/ShelfTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/de/svemass/rotomat/view/RotomatViewTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/de/svemass/rotomat/model/RotomatModelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/de/svemass/rotomat/model/RotomatModelTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,57 +46,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Compartment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+            <state relative-caret-position="289">
+              <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="161" selection-start-line="161" selection-end-line="161" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Shelf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#250#251#0" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,10 +75,72 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#623#624#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/SearchTextField.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Shelf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/InventoryTextField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="374">
               <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -122,18 +154,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/SearchTextField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -155,6 +175,8 @@
       <find>when</find>
       <find>getShe</find>
       <find>xml</find>
+      <find>bind</find>
+      <find>execu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,19 +200,19 @@
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/TextFieldWithListener.java" />
         <option value="$PROJECT_DIR$/src/main/test/de/svemass/rotomat/model/RotomatModelTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/ObservableRotomatModel.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/shelf.java" />
         <option value="$PROJECT_DIR$/test/de/svemass/rotomat/model/CompartmentTest.java" />
         <option value="$PROJECT_DIR$/test/de/svemass/rotomat/model/ShelfTest.java" />
-        <option value="$PROJECT_DIR$/test/de/svemass/rotomat/model/RotomatModelTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/RotomatDataBase.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/SearchTextField.java" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Compartment.java" />
+        <option value="$PROJECT_DIR$/test/de/svemass/rotomat/model/RotomatModelTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Shelf.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java" />
       </list>
     </option>
   </component>
@@ -198,11 +220,43 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rotomat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rotomat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rotomat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="rotomat" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
+    <option name="x" value="1099" />
+    <option name="y" value="174" />
     <option name="width" value="683" />
     <option name="height" value="743" />
   </component>
@@ -214,6 +268,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,12 +348,17 @@
               <item name="rotomat" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="rotomat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="rotomat" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,7 +376,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -419,8 +480,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.All in rotomat" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.RotomatModelTest" />
         <item itemvalue="JUnit.RotomatModelTest.getShelves" />
         <item itemvalue="JUnit.RotomatModelTest.toStringTest" />
@@ -443,7 +504,8 @@
       <workItem from="1557017811589" duration="7751000" />
       <workItem from="1557066124970" duration="32138000" />
       <workItem from="1557138541158" duration="2780000" />
-      <workItem from="1557141341378" duration="4879000" />
+      <workItem from="1557141341378" duration="13799000" />
+      <workItem from="1557160437598" duration="197000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Add basic model + methodes + tests.&quot;">
       <created>1556831845892</created>
@@ -463,12 +525,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RotomatModelTest_getShelves - 2019.05.06 at 01h 35m 19s.xml">
-      <configuration name="RotomatModelTest.getShelves" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RotomatModelTest_getShelves - 2019.05.06 at 01h 38m 29s.xml">
-      <configuration name="RotomatModelTest.getShelves" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RotomatModelTest_getShelves - 2019.05.06 at 01h 39m 44s.xml">
       <configuration name="RotomatModelTest.getShelves" configurationId="JUnit" />
     </history-entry>
@@ -493,9 +549,15 @@
     <history-entry file="All_in_rotomat - 2019.05.06 at 02h 27m 29s.xml">
       <configuration name="All in rotomat" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_rotomat - 2019.05.06 at 15h 05m 29s.xml">
+      <configuration name="All in rotomat" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_rotomat - 2019.05.06 at 15h 11m 46s.xml">
+      <configuration name="All in rotomat" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69092000" />
+    <option name="totallyTimeSpent" value="78209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -510,14 +572,13 @@
     <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19435611" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12599364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="CheckStyle" visible="true" weight="0.32969603" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289166" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289166" />
@@ -527,10 +588,12 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32952693" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32952693" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32952693" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3289166" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3289166" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="13" weight="0.32969603" />
+      <window_info anchor="bottom" id="CheckStyle" order="14" weight="0.32969603" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -540,7 +603,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="right" id="Maven" order="9" />
+      <window_info anchor="right" id="Maven" order="9" weight="0.10055644" />
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3298887" />
     </layout>
   </component>
@@ -697,59 +760,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/de/svemass/rotomat/model/CompartmentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding>
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
-            <element signature="e#544#545#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/de/svemass/rotomat/model/ShelfTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-          <folding>
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/de/svemass/rotomat/model/RotomatModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
-            <element signature="e#2378#2379#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/RotomatDataBase.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/11/javafx-graphics-11-win.jar!/javafx/scene/Node.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
@@ -761,12 +772,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java">
+    <entry file="file://$PROJECT_DIR$/test/de/svemass/rotomat/model/CompartmentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        <state relative-caret-position="340">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2363">
+          <caret line="139" column="62" selection-start-line="139" selection-start-column="62" selection-end-line="139" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34833">
+          <caret line="2133" column="18" selection-start-line="2133" selection-start-column="18" selection-end-line="2133" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/de/svemass/rotomat/model/RotomatModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/de/svemass/rotomat/model/ShelfTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Compartment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+          <folding>
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -788,8 +845,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/RotomatModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+        <state relative-caret-position="493">
+          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Shelf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -798,7 +865,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/InventoryTextField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
+        <state relative-caret-position="374">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -815,8 +882,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/RotomatView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="161" selection-start-line="161" selection-end-line="161" />
+        <state relative-caret-position="1224">
+          <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -825,27 +892,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/view/SearchTextField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Compartment.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/controller/RotomatController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/de/svemass/rotomat/model/Shelf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+        <state relative-caret-position="368">
+          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
           </folding>
         </state>
       </provider>

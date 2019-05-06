@@ -24,7 +24,7 @@ class RotomatModelTest {
   private RotomatModel mySpy;
 
   @BeforeEach
-  void beforeEach() {
+  public void beforeEach() {
     cut = new RotomatModel(amountShelves, amountCompartmentsPerShelf);
     mySpy = spy(cut);
     doNothing().when(mySpy).updateTextField(anyInt(), anyInt(), anyString(), anyInt());
@@ -33,7 +33,7 @@ class RotomatModelTest {
   }
 
   @Test
-  void renameSlotTest() {
+  public void renameSlotTest() {
 
     mySpy.renameSlot(1, 3, "Test", 0);
     String expectedResult =
@@ -44,7 +44,7 @@ class RotomatModelTest {
   }
 
   @Test
-  void toStringTest() {
+  public void toStringTest() {
     StringBuilder sb = new StringBuilder();
     for (int i = 0; i < amountShelves; i++) {
       sb.append("[");
@@ -57,7 +57,7 @@ class RotomatModelTest {
   }
 
   @Test
-  void setObserver() {
+  public void setObserver() {
 
     MockitoAnnotations.initMocks(this);
     cut.setObserver(rotomatModelObserver);
@@ -65,14 +65,14 @@ class RotomatModelTest {
   }
 
   @Test
-  void toggleGridEditable() {
+  public void toggleGridEditable() {
     boolean before = mySpy.isModelEditable();
     mySpy.toggleGridEditable();
     assertEquals(!before, mySpy.isModelEditable());
   }
 
   @Test
-  void getShelves() {
+  public void getShelves() {
     assertEquals(createShelves().toString(), cut.getShelves().toString());
   }
 
@@ -83,12 +83,4 @@ class RotomatModelTest {
     }
     return shelves;
   }
-
-  //  private static Shelf createNewShelf() {
-  //    Shelf shelf = new ArrayList<>(amountCompartmentsPerShelf);
-  //    for (int i = 0; i < amountCompartmentsPerShelf; i++) {
-  //      shelf.addComparment(new Compartment("Leeres Fach"));
-  //    }
-  //    return shelf;
-  //  }
 }
