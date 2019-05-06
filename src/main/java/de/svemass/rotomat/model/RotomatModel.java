@@ -20,7 +20,7 @@ public class RotomatModel extends ObservableRotomatModel {
     this.shelves = model.shelves;
     this.setObserver(view);
     this.updateGridView(this);
-  } // Do not remove! Needed for Xml builder.
+  }
 
   public RotomatModel(int amountShelves, int amountCompartmentsPerShelf, RotomatView view) {
     this(amountShelves, amountCompartmentsPerShelf);

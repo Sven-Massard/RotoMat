@@ -8,11 +8,11 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 
-class TextFieldWithListener extends TextField {
+class InventoryTextField extends TextField {
 
   private ChangeListener<Boolean> focusListener;
 
-  TextFieldWithListener(String name, boolean isGridEditable, RotomatController controller) {
+  InventoryTextField(String name, boolean isGridEditable, RotomatController controller) {
     super(name);
 
     setEditable(isGridEditable);

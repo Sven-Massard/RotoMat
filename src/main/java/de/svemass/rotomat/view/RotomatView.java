@@ -16,11 +16,11 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import javax.xml.bind.JAXBException;
-import java.io.FileNotFoundException;
 
 public class RotomatView extends Application implements RotomatModelObserver {
   private static RotomatController controller;
@@ -43,15 +43,17 @@ public class RotomatView extends Application implements RotomatModelObserver {
   }
 
   @Override
-  public void start(Stage primaryStage) throws JAXBException, FileNotFoundException {
+  public void start(Stage primaryStage) throws JAXBException {
     instance = this;
     stage = primaryStage;
     stage.setTitle("Rotomat Inventar");
     scrollPane = new ScrollPane();
+    scrollPane.setFitToWidth(true);
     Scene scene = new Scene(new Group());
-    VBox vBox = new VBox();
-    vBox.getChildren().addAll(scrollPane);
-    scene.setRoot(vBox);
+    VBox vbox = new VBox();
+    vbox.getChildren().addAll(scrollPane);
+
+    scene.setRoot(vbox);
 
     // Buttons
     Button editButton = new Button("Felder editierbar machen");
@@ -69,10 +71,14 @@ public class RotomatView extends Application implements RotomatModelObserver {
     Button saveButton = new Button("Speichern");
     saveButton.setOnAction(actionEvent -> controller.saveToFile());
 
-    BorderPane buttonBox = new BorderPane();
-    buttonBox.setLeft(editButton);
-    buttonBox.setRight(saveButton);
-    vBox.getChildren().add(buttonBox);
+    // Search Button
+    TextField searchTextField = createSearchTextField();
+
+    BorderPane buttonAndSearchPane = new BorderPane();
+    buttonAndSearchPane.setLeft(editButton);
+    buttonAndSearchPane.setRight(saveButton);
+    buttonAndSearchPane.setCenter(searchTextField);
+    vbox.getChildren().add(buttonAndSearchPane);
     stage.setScene(scene);
     controller.initializeModel(getInstance());
   }
@@ -92,14 +98,14 @@ public class RotomatView extends Application implements RotomatModelObserver {
   @Override
   public void updateTextField(int row, int column, String newName, Integer caretPosition) {
     for (Node node : gridPane.getChildren()) {
-      if (node instanceof TextFieldWithListener
+      if (node instanceof InventoryTextField
           && GridPane.getColumnIndex(node) == column
           && GridPane.getRowIndex(node) == row) {
-        ((TextFieldWithListener) node).removeListeners();
+        ((InventoryTextField) node).removeListeners();
         Platform.runLater(
             () -> {
               gridPane.getChildren().remove(node);
-              TextField newTextField = createTextField(newName);
+              TextField newTextField = createInventoryTextField(newName);
               gridPane.add(newTextField, column, row);
               if (caretPosition != null) {
                 newTextField.requestFocus();
@@ -129,7 +135,7 @@ public class RotomatView extends Application implements RotomatModelObserver {
       grid.add(new Label("Regal " + (i + 1) + ""), 0, i + 1);
       Shelf shelf = rotomatModel.getShelves().get(i);
       for (int j = 0; j < shelf.getAmountComparments(); j++) {
-        TextField currentTextField = createTextField(shelf.getCompartment(j).getName());
+        TextField currentTextField = createInventoryTextField(shelf.getCompartment(j).getName());
         grid.add(currentTextField, j + 1, i + 1);
       }
     }
@@ -146,7 +152,27 @@ public class RotomatView extends Application implements RotomatModelObserver {
     }
   }
 
-  private TextField createTextField(String name) {
-    return new TextFieldWithListener(name, isGridEditable, controller);
+  private TextField createInventoryTextField(String name) {
+    InventoryTextField textField = new InventoryTextField(name, isGridEditable, controller);
+    GridPane.setHgrow(textField, Priority.ALWAYS);
+    return textField;
+  }
+
+  private TextField createSearchTextField() {
+
+    return new SearchTextField(this);
+  }
+
+  void search(String text) {
+    for (Node node : gridPane.getChildren()) {
+      if (node instanceof InventoryTextField) {
+        InventoryTextField currentTextField = (InventoryTextField) node;
+        if (currentTextField.getText().toLowerCase().contains(text.toLowerCase())) {
+          currentTextField.setStyle("-fx-background-color: lightgreen;");
+        } else {
+          currentTextField.setStyle(null);
+        }
+      }
+    }
   }
 }

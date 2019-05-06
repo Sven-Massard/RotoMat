@@ -8,7 +8,6 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
-import java.io.FileNotFoundException;
 
 public class RotomatController {
   private static final int amountShelves = 46; // TODO Move elsewhere
@@ -48,7 +47,7 @@ public class RotomatController {
     RotomatView.main(args);
   }
 
-  public void initializeModel(RotomatView view) throws JAXBException, FileNotFoundException {
+  public void initializeModel(RotomatView view) throws JAXBException {
     if (file.exists()) {
       System.out.println("Model File found!"); // TODO Make real log entry
       model = new RotomatModel(xmlToModel(), view);
